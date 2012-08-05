@@ -18,14 +18,14 @@ class TwitterController < ApplicationController
 
     begin
       user=Twitter.user(username)
-      puts "Status Count "+user.status_count.to_s
+      puts "Status Count #{user.status_count}"
       np = ([1000, user.status_count].min/200.0).ceil
-      puts "Number of pages"+np.to_s
+      puts "Number of pages #{np}"
       count=0
       wc={}
       (1..np).each do |page_number|
         options["page"]=page_number
-        all=Twitter.user_timeline(username,options )
+        all=Twitter.user_timeline(username,options)
         puts "Fetching page #{page_number}"
         count+=all.size.to_i
           all.each do |stat|
