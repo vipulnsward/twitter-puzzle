@@ -1,63 +1,38 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Byclor">
     <title>Twitter Cloud</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/jqcloud.css" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://raw.github.com/lucaong/jQCloud/master/jqcloud/jqcloud-1.0.0.min.js"></script>
-    <script type="text/javascript">
-      var word_list = new Array(
-        {text: "1" , weight: 29},
-        {text: "2" , weight: 24},
-        {text: "3" , weight: 25},
-        {text: "", weigth:0}
-      );
-      $(document).ready(function() {
-        $("#wordcloud").jQCloud(word_list);
-      });
-    </script>
-    <style type="text/css">
-      body {
-        background: #eee;
-        font-family: Helvetica, Arial, sans-serif;
-      }
-      #wordcloud {
-        margin: 10px auto;
-        width: 1000px;
-        height: 800px;
-        border: none;
-      }
-      #wordcloud span.w10, #wordcloud span.w9, #wordcloud span.w8, #wordcloud span.w7 {
-        text-shadow: 0px 1px 1px #ccc;
-      }
-      #wordcloud span.w3, #wordcloud span.w2, #wordcloud span.w1 {
-        text-shadow: 0px 1px 1px #fff;
-      }
-      #footer {
-        font-size: 13px;
-        color: #aaa;
-        text-align: center;
-        width: 600px;
-        margin: 30px auto;
-        padding: 0.5em;
-        text-shadow: 0px 1px 1px #fff;
-        border-top: 1px dotted #ddd;
-      }
-      #footer a {
-        color: #0af;
-        text-decoration: none;
-      }
-    </style>
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link href="stylesheets/app.css" rel='stylesheet' type="text/css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+
   </head>
-  <body>
-    <form id="process-twitter-handle" action="/twitter/index" method="POST" align="center">
-        Twitter handle: @ <input type="text" name="handle" value="" /><br />
-      	<input class="btn btn-large btn-danger" id="submit_button" type="submit"
-      	value="Generate Cloud" />
-    </form>
-    <div id="wordcloud"></div>
-    <div id="footer">
-     </div>
+
+  <body class="index">
+    <section id="container">
+      <section class="samples">
+
+
+  <section class="sample" id="bringhurst">
+    <section class="text">
+      <h1>A simple app to mine twitter feed data</h1>
+      <form action="/twitter/index" method="POST">
+        <h1>twitter handle: @ <input type="text" name="handle" value="" />
+        <input id="submit_button" type="submit" value="Generate Cloud" /></h1> 
+      </form>
+    </section>
+
+  </section>
+
+
+<footer>
+  <p>Code @ <a href="github.com/vipulnsward/twitter-puzzle">twitter-puzzle</a>| Follow me here &mdash;<a href="twitter.com/vipulnsward">vipulnsward<a></p>
+</footer>
+
+
+    </section>
+
   </body>
 </html>
