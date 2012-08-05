@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQCloud Demo</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/jqcloud.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/lucaong/jQCloud/master/jqcloud/jqcloud-1.0.0.min.js"></script>
+    <script type="text/javascript">
+      var word_list = new Array(
+        {text: "1" , weight: 29},
+        {text: "2" , weight: 24},
+        {text: "3" , weight: 25},
+        {text: "4" , weight: 23},
+        {text: "5" , weight: 20},
+        {text: "6" , weight: 29},
+        {text: "7" , weight: 29},
+        {text: "8" , weight: 36},
+        {text: "9" , weight: 34},
+        {text: "10" , weight: 25},
+        {text: "11" , weight: 19},
+        {text: "12" , weight: 28},
+        {text: "13" , weight: 31},
+        {text: "14" , weight: 28},
+        {text: "15" , weight: 32},
+        {text: "16" , weight: 18},
+        {text: "17" , weight: 21},
+        {text: "18" , weight: 12},
+        {text: "19" , weight: 15},
+        {text: "20" , weight: 27},
+        {text: "21" , weight: 18},
+        {text: "22" , weight: 15},
+        {text: "23" , weight: 13},
+        {text: "24" , weight: 8},
+        {text: "25" , weight: 9},
+        {text: "26" , weight: 5},
+        {text: "27" , weight: 4},
+        {text: "32" , weight: 1},
+        {text: "", weigth:0}
+      );
+      $(document).ready(function() {
+        $("#wordcloud").jQCloud(word_list);
+      });
+    </script>
+    <style type="text/css">
+      body {
+        background: #eee;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      #wordcloud {
+        margin: 10px auto;
+        width: 1000px;
+        height: 800px;
+        border: none;
+      }
+      #wordcloud span.w10, #wordcloud span.w9, #wordcloud span.w8, #wordcloud span.w7 {
+        text-shadow: 0px 1px 1px #ccc;
+      }
+      #wordcloud span.w3, #wordcloud span.w2, #wordcloud span.w1 {
+        text-shadow: 0px 1px 1px #fff;
+      }
+      #footer {
+        font-size: 13px;
+        color: #aaa;
+        text-align: center;
+        width: 600px;
+        margin: 30px auto;
+        padding: 0.5em;
+        text-shadow: 0px 1px 1px #fff;
+        border-top: 1px dotted #ddd;
+      }
+      #footer a {
+        color: #0af;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="process-twitter-handle" action="/twitter/index" method="POST">
+        Twitter handle: @ <input type="text" name="handle" value="" /><br />
+      	<input class="btn btn-large btn-danger" id="submit_button" type="submit"
+      	value="Generate Cloud" />
+    </form>
+    <div id="wordcloud"></div>
+    <div id="footer">
+     </div>
+    <!-- Google Analytics -->
+    <!--script type='text/javascript'>
+      //<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-772585-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      //]]>
+    </script>
+    <!-- End Google Analytics -->
+  </body>
+</html>
