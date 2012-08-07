@@ -3,7 +3,7 @@
   <head>
     <title>Twitter Cloud</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://raw.github.com/lucaong/jQCloud/master/jqcloud/jqcloud-1.0.0.min.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/lucaong/jQCloud/master/jqcloud/jqcloud-1.0.1.min.js"></script>
     <script type="text/javascript">
       var word_list = new Array(
       <%@x.each do |t, w|%>
@@ -37,8 +37,9 @@
   <body class="index">
     <h1 align="center">Mined your <%=@count%> tweet(s)!</h1>
     <div id="wordcloud"></div>
-    <div id="footer">
-     </div>
+    <footer>
+      <a class="btn btn-primary" href="/"> Try Again?</a>
+    </footer>
     <!-- Google Analytics -->
     <script type="text/javascript">
 
