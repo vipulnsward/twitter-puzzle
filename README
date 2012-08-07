@@ -1,3 +1,7 @@
 Solution for
 
 http://twitterpuzzle.herokuapp.com/
+
+*Includes retweets
+*Excludes Replies
+*Sampling size -1000 tweets 
