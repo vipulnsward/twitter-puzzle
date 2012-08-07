@@ -8,6 +8,9 @@ class TwitterController < ApplicationController
    puts @count
   end
 
+  def landing    
+  end
+  
   def getCloud(username)
 
   options= {}
